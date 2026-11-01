@@ -21,15 +21,36 @@ const GEMINI_URL =
 // MIDDLEWARE
 // --------------------------------------------------
 
+// --------------------------------------------------
+// MIDDLEWARE
+// --------------------------------------------------
+
+const allowedOrigins = new Set([
+  FRONTEND_URL,
+  "https://farm-connect-ashen.vercel.app",
+  "http://localhost:5173",
+  "http://localhost:5174",
+]);
+
 app.use(
   cors({
-    origin: [
-      FRONTEND_URL,
-      "http://localhost:5173",
-      "http://localhost:5174",
-    ],
+    origin: (origin, callback) => {
+      // Allow requests without an Origin header, such as
+      // direct server-to-server requests.
+      if (!origin || allowedOrigins.has(origin)) {
+        return callback(null, true);
+      }
+
+      console.error("[CORS BLOCKED]", origin);
+
+      return callback(
+        new Error("Origin not allowed by FarmConnect CORS policy.")
+      );
+    },
   })
 );
+
+app.use(express.json({ limit: "12mb" }));
 
 app.use(express.json({ limit: "12mb" }));
 
