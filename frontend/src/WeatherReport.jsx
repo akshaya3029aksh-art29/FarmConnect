@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://farmconnect-s3o5.onrender.com";
 
 // Karnataka district headquarters and commonly searched towns.
 // The search field also supports locations outside this list.

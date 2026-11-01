@@ -26,7 +26,8 @@ import { auth, db } from "./firebase";
 import "./App.css";
 
 const API_URL = (
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000"
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://farmconnect-s3o5.onrender.com"
 ).replace(/\/+$/, "");
 const AI_TIMEOUT = 120000;
 const MAX_IMAGE_SIZE = 6 * 1024 * 1024;
