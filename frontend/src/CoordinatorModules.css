@@ -1,0 +1,60 @@
+.coordinator-module {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.coordinator-module h2 {
+  margin-bottom: 10px;
+}
+
+.coordinator-summary {
+  margin: 20px 0;
+  padding: 16px;
+  background: #e8f5e9;
+  border-radius: 10px;
+}
+
+.coordinator-search {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.coordinator-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.coordinator-card {
+  padding: 18px;
+  border: 1px solid #dce5dc;
+  border-radius: 12px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+.coordinator-card h3 {
+  margin-top: 0;
+}
+
+.coordinator-listing {
+  padding: 12px;
+  margin-top: 10px;
+  background: #f5f8f5;
+  border-radius: 8px;
+}
+
+.coordinator-error {
+  padding: 12px;
+  color: #9b1c1c;
+  background: #ffebee;
+  border-radius: 8px;
+}
